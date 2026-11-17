@@ -1,0 +1,551 @@
+1
+00:00:00,000 --> 00:00:01,467
+Hi Ilyasa.
+
+2
+00:00:01,467 --> 00:00:04,833
+This video walks you through your PSM2 project.
+
+3
+00:00:04,833 --> 00:00:06,600
+We will cover four things.
+
+4
+00:00:06,600 --> 00:00:08,100
+What the system does.
+
+5
+00:00:08,100 --> 00:00:09,500
+How it is wired.
+
+6
+00:00:09,500 --> 00:00:12,533
+Which commands to run and how to read the console.
+
+7
+00:00:12,533 --> 00:00:14,967
+And how to read the machine learning results.
+
+8
+00:00:15,767 --> 00:00:20,033
+The PZEM sensor measures how much power one appliance is using.
+
+9
+00:00:20,033 --> 00:00:24,333
+The ESP32 sends that reading over WiFi to Blynk.
+
+10
+00:00:24,333 --> 00:00:31,667
+A Python script on the laptop reads it from Blynk, and an LSTM model predicts the power for the next thirty minutes.
+
+11
+00:00:31,667 --> 00:00:37,000
+The script compares the prediction with a limit, makes a decision, and writes it back to Blynk.
+
+12
+00:00:37,000 --> 00:00:43,500
+The ESP32 picks up the decision and acts, using the relay, the buzzer and the LCD.
+
+13
+00:00:43,500 --> 00:00:47,133
+The laptop never talks to the ESP32 directly.
+
+14
+00:00:47,133 --> 00:00:48,967
+Everything goes through Blynk.
+
+15
+00:00:49,767 --> 00:00:51,867
+There are four possible decisions.
+
+16
+00:00:51,867 --> 00:00:53,600
+OK means no action.
+
+17
+00:00:53,600 --> 00:00:55,667
+NOTIFY is a warning only.
+
+18
+00:00:55,667 --> 00:00:58,600
+It is used for the laptop, which is never cut.
+
+19
+00:00:58,600 --> 00:01:02,133
+SHIFT is advice to use the appliance at a cheaper time.
+
+20
+00:01:02,133 --> 00:01:05,100
+It is used for the fan, and the relay stays on.
+
+21
+00:01:05,100 --> 00:01:08,067
+CUTOFF is for the water heater and the test lamp.
+
+22
+00:01:08,067 --> 00:01:11,900
+The buzzer warns for thirty seconds, then the relay cuts the power.
+
+23
+00:01:11,900 --> 00:01:21,800
+The limit gets tighter when this month's usage is close to the next TNB price bracket, or during the Time of Use peak, from 2 pm to 10 pm on weekdays.
+
+24
+00:01:22,600 --> 00:01:24,300
+Here is the full circuit.
+
+25
+00:01:24,300 --> 00:01:32,400
+On the left is the low voltage side: the ESP32, the LCD, the DHT22 sensor and the buzzer.
+
+26
+00:01:32,400 --> 00:01:39,600
+On the right is the mains side: the PZEM with its current coil, the relay, and the socket where the appliance plugs in.
+
+27
+00:01:39,600 --> 00:01:44,300
+The lamp in this picture stands for whatever appliance is plugged into the socket.
+
+28
+00:01:45,100 --> 00:01:46,467
+These are the pins.
+
+29
+00:01:46,467 --> 00:01:49,867
+GPIO 26 goes to the relay input.
+
+30
+00:01:49,867 --> 00:01:52,867
+GPIO 27 goes to the buzzer.
+
+31
+00:01:52,867 --> 00:02:01,200
+The PZEM uses serial: its TX goes to GPIO 16, and its RX goes to GPIO 17.
+
+32
+00:02:01,200 --> 00:02:09,467
+The LCD uses I2C on GPIO 21 for SDA and GPIO 22 for SCL.
+
+33
+00:02:09,467 --> 00:02:13,700
+The DHT22 data pin goes to GPIO 4.
+
+34
+00:02:13,700 --> 00:02:19,067
+The relay, the PZEM and the LCD take power from VIN, which is 5 volts.
+
+35
+00:02:19,067 --> 00:02:21,300
+And every ground is joined together.
+
+36
+00:02:22,100 --> 00:02:25,233
+On the mains side, only the live wire is switched.
+
+37
+00:02:25,233 --> 00:02:31,833
+From the plug, live goes through the 10 amp fuse and through the CT coil, into the relay COM terminal.
+
+38
+00:02:31,833 --> 00:02:35,067
+The relay NO terminal goes to the socket live.
+
+39
+00:02:35,067 --> 00:02:37,233
+Neutral and earth go straight through.
+
+40
+00:02:37,233 --> 00:02:43,700
+The PZEM voltage terminals tap live and neutral before the relay, so voltage is always measured.
+
+41
+00:02:44,500 --> 00:02:45,900
+Safety first.
+
+42
+00:02:45,900 --> 00:02:49,067
+Always unplug the box before you open or touch it.
+
+43
+00:02:49,067 --> 00:02:53,133
+Test with the lamp first, then the fan, and only then the water heater.
+
+44
+00:02:53,133 --> 00:03:02,467
+One thing to check before your demo: the relay board is a 5 volt active low board, and with a 3.3 volt signal it can stay on all the time.
+
+45
+00:03:02,467 --> 00:03:08,200
+Fix it with the JD VCC jumper, or set RELAY OPEN DRAIN to true in the sketch.
+
+46
+00:03:08,200 --> 00:03:12,867
+Then run the pin test sketch in mode 2, and make sure the relay clicks on and off.
+
+47
+00:03:13,667 --> 00:03:16,233
+In Blynk, V0 is the live power.
+
+48
+00:03:16,233 --> 00:03:23,200
+V10 is the decision, from 0 for OK up to 3 for CUTOFF, and V11 is the reason text.
+
+49
+00:03:23,200 --> 00:03:25,367
+V12 shows the relay state.
+
+50
+00:03:25,367 --> 00:03:31,633
+V13 lets you force the relay on or off by hand, and V14 lets you mute the buzzer.
+
+51
+00:03:31,633 --> 00:03:38,367
+V15 turns the wattage mapping on or off, and V16 to V20 show the tariff and the cost.
+
+52
+00:03:38,367 --> 00:03:42,733
+The switches only work on the Devices page, not on the template page.
+
+53
+00:03:42,733 --> 00:03:45,333
+Your auth token is in Device Info.
+
+54
+00:03:45,333 --> 00:03:48,267
+Keep it private, and never show it in a recording.
+
+55
+00:03:49,067 --> 00:03:50,667
+Setup is done once.
+
+56
+00:03:50,667 --> 00:03:55,833
+Open a Command Prompt in the scripts folder and install the Python packages with pip.
+
+57
+00:03:55,833 --> 00:03:59,967
+Then open live control loop dot py and paste your Blynk token.
+
+58
+00:03:59,967 --> 00:04:10,467
+In the Arduino IDE, open the main sketch, choose ESP32 Dev Module, fill in the template ID, the token and your WiFi, and upload.
+
+59
+00:04:10,467 --> 00:04:18,767
+For quick testing, set LIVE SEND MS to five thousand, so the ESP32 sends a reading every five seconds.
+
+60
+00:04:19,567 --> 00:04:21,600
+To run it, use two terminals.
+
+61
+00:04:21,600 --> 00:04:27,367
+In the first one, start the live loop and tell it which appliance is plugged in, for example the lamp.
+
+62
+00:04:27,367 --> 00:04:33,133
+In the second, start the dashboard with streamlit, or just double click run dashboard dot bat.
+
+63
+00:04:33,133 --> 00:04:35,033
+It opens in your browser.
+
+64
+00:04:35,033 --> 00:04:39,533
+If you have no hardware with you, demo decision now gives instant results.
+
+65
+00:04:39,533 --> 00:04:44,167
+Add dash dash push to send the result to Blynk, and the LCD will show it.
+
+66
+00:04:44,967 --> 00:04:47,567
+When the live loop starts, it prints a header.
+
+67
+00:04:47,567 --> 00:04:50,400
+The first line says if wattage mapping is on.
+
+68
+00:04:50,400 --> 00:04:54,967
+The small lamp is scaled up to the size of appliance the model was trained on.
+
+69
+00:04:54,967 --> 00:04:58,333
+The second line shows the tariff and the price right now.
+
+70
+00:04:58,333 --> 00:05:01,800
+Fast test mode means it reads every thirty seconds.
+
+71
+00:05:01,800 --> 00:05:06,067
+That tests the whole chain, but it is not a true thirty minute forecast.
+
+72
+00:05:06,067 --> 00:05:12,867
+The last line shows the appliance and this month's kilowatt hours, which are used for the TNB bracket check.
+
+73
+00:05:13,667 --> 00:05:18,033
+The first four readings only fill the window, so there is no decision yet.
+
+74
+00:05:18,033 --> 00:05:21,133
+From the fourth reading, each line shows three numbers.
+
+75
+00:05:21,133 --> 00:05:22,933
+Now is the live reading.
+
+76
+00:05:22,933 --> 00:05:26,100
+Forecast is what the LSTM expects next.
+
+77
+00:05:26,100 --> 00:05:27,933
+Limit is the threshold.
+
+78
+00:05:27,933 --> 00:05:31,533
+If the forecast is above the limit, the decision changes.
+
+79
+00:05:31,533 --> 00:05:37,500
+The decision is sent to Blynk only when it changes, so the buzzer does not beep every thirty seconds.
+
+80
+00:05:37,500 --> 00:05:44,200
+If you see could not read V0, check that the ESP32 is on, the WiFi, and the token.
+
+81
+00:05:44,200 --> 00:05:50,700
+If V0 has not changed for six readings, set LIVE SEND MS to five thousand in the sketch.
+
+82
+00:05:51,500 --> 00:05:53,500
+The LCD has two rows.
+
+83
+00:05:53,500 --> 00:05:55,533
+The top row shows the decision.
+
+84
+00:05:55,533 --> 00:05:58,400
+The star at the end means Blynk is connected.
+
+85
+00:05:58,400 --> 00:06:01,000
+An exclamation mark means it is not.
+
+86
+00:06:01,000 --> 00:06:06,667
+The second row shows power, voltage and temperature, or the reason text when there is a warning.
+
+87
+00:06:06,667 --> 00:06:11,100
+CUTOFF in 25 seconds is the countdown before the relay cuts.
+
+88
+00:06:11,100 --> 00:06:20,467
+FAILSAFE means the cloud was lost for more than five minutes, or Python sent nothing for 45 minutes, so the relay is switched back on to be safe.
+
+89
+00:06:21,267 --> 00:06:22,967
+Now the machine learning.
+
+90
+00:06:22,967 --> 00:06:30,933
+The models were trained on the iAWE dataset, which is real power data from homes in Delhi, in fifteen minute steps.
+
+91
+00:06:30,933 --> 00:06:37,833
+The model looks at the last four readings, which is one hour, and predicts the next two steps, which is thirty minutes.
+
+92
+00:06:37,833 --> 00:06:42,200
+It is two LSTM layers of 64 units with dropout.
+
+93
+00:06:42,200 --> 00:06:44,300
+There is one model per appliance.
+
+94
+00:06:44,300 --> 00:06:53,933
+Be honest about this part: the water heater model was trained on an air conditioner channel, so it is a proxy, and the fan model was trained on a TV channel.
+
+95
+00:06:53,933 --> 00:06:57,533
+ARIMA is used as the baseline to compare against.
+
+96
+00:06:58,333 --> 00:07:01,700
+This graph is the easiest way to see if the model works.
+
+97
+00:07:01,700 --> 00:07:07,533
+Blue is the real power, and orange is the prediction, on test data the model never saw.
+
+98
+00:07:07,533 --> 00:07:12,267
+When the heater is steadily on or off, the orange line sits right on the blue line.
+
+99
+00:07:12,267 --> 00:07:16,400
+When the heater suddenly switches, the prediction is about one step late.
+
+100
+00:07:16,400 --> 00:07:21,600
+That is normal for this kind of model, because it can only learn from what it has already seen.
+
+101
+00:07:22,400 --> 00:07:24,400
+The loss curve shows the training.
+
+102
+00:07:24,400 --> 00:07:31,400
+Blue is the error on training data, and orange is the error on validation data the model did not train on.
+
+103
+00:07:31,400 --> 00:07:33,600
+Both drop quickly and stay low.
+
+104
+00:07:33,600 --> 00:07:38,167
+Because the orange line does not climb back up, the model is not overfitting.
+
+105
+00:07:38,967 --> 00:07:40,433
+Here are the numbers.
+
+106
+00:07:40,433 --> 00:07:45,800
+RMSE and MAE are the average error in watts, so smaller is better.
+
+107
+00:07:45,800 --> 00:07:48,433
+Compare them with the size of the appliance.
+
+108
+00:07:48,433 --> 00:07:55,300
+An error of four hundred watts sounds big, but the heater swings between zero and almost two thousand watts.
+
+109
+00:07:55,300 --> 00:08:00,967
+R squared is a score where one is perfect, and zero means no better than guessing the average.
+
+110
+00:08:00,967 --> 00:08:05,300
+The water heater model is the strongest, at 0.70.
+
+111
+00:08:05,300 --> 00:08:07,933
+The laptop is 0.50.
+
+112
+00:08:07,933 --> 00:08:15,667
+The fan is the weakest at 0.30, because its power hardly changes, so there is very little pattern to learn.
+
+113
+00:08:16,467 --> 00:08:19,767
+This chart compares the LSTM with ARIMA.
+
+114
+00:08:19,767 --> 00:08:21,233
+Be careful with it.
+
+115
+00:08:21,233 --> 00:08:27,367
+The two models were tested on different samples, so the RMSE bars are not a fair head to head.
+
+116
+00:08:27,367 --> 00:08:34,967
+Using R squared, the LSTM is better for the water heater, 0.64 against 0.43.
+
+117
+00:08:34,967 --> 00:08:37,233
+ARIMA is better for the laptop.
+
+118
+00:08:37,233 --> 00:08:40,000
+Say this openly in your report and viva.
+
+119
+00:08:40,000 --> 00:08:42,467
+It is a real result, not a mistake.
+
+120
+00:08:43,267 --> 00:08:45,700
+This is the best thing to show in your viva.
+
+121
+00:08:45,700 --> 00:08:49,867
+It is the same water heater, using the same fifteen hundred watts.
+
+122
+00:08:49,867 --> 00:08:55,967
+In the middle of the month, the limit is sixteen hundred and twenty watts, so the system only gives a warning.
+
+123
+00:08:55,967 --> 00:09:05,667
+When the month's usage is just five kilowatt hours from the two hundred bracket, the limit drops to twelve hundred and fifty five watts, and the same heater is cut off.
+
+124
+00:09:05,667 --> 00:09:08,767
+That is the predictive, tariff aware part working.
+
+125
+00:09:09,567 --> 00:09:11,333
+Finally, the dashboard.
+
+126
+00:09:11,333 --> 00:09:15,033
+The control panel is where you start a demo or the live loop.
+
+127
+00:09:15,033 --> 00:09:22,000
+The Today tab shows power and price for today, with the real reading in blue and the LSTM in orange.
+
+128
+00:09:22,000 --> 00:09:24,833
+Live decisions is the main demo page.
+
+129
+00:09:24,833 --> 00:09:29,867
+Model shows the accuracy, and Decision logic lets you try your own numbers.
+
+130
+00:09:29,867 --> 00:09:33,567
+When you finish, press stop live loop before you close the dashboard.
+
+131
+00:09:34,367 --> 00:09:37,667
+To finish, a few things to say honestly to your panel.
+
+132
+00:09:37,667 --> 00:09:40,667
+The heater model is an air conditioner proxy.
+
+133
+00:09:40,667 --> 00:09:44,500
+The live demo shows the mechanism working from end to end.
+
+134
+00:09:44,500 --> 00:09:46,300
+It is not a measured saving.
+
+135
+00:09:46,300 --> 00:09:50,533
+Wattage mapping fixes the size of the reading, not the usage pattern.
+
+136
+00:09:50,533 --> 00:09:53,700
+And demo scenarios are not live sensor data.
+
+137
+00:09:53,700 --> 00:09:55,500
+That is the whole project.
+
+138
+00:09:55,500 --> 00:09:57,033
+Good luck with your viva.

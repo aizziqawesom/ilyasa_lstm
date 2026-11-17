@@ -1,0 +1,29 @@
+[
+  {
+    "appliance": "fan",
+    "n_cycles": 20,
+    "action_counts": {
+      "SHIFT": 15,
+      "OK": 5
+    },
+    "csv": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/fan_control_simulation.csv"
+  },
+  {
+    "appliance": "geyser",
+    "n_cycles": 20,
+    "action_counts": {
+      "OK": 11,
+      "CUTOFF": 8,
+      "NOTIFY": 1
+    },
+    "csv": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/geyser_control_simulation.csv"
+  },
+  {
+    "appliance": "computer",
+    "n_cycles": 20,
+    "action_counts": {
+      "OK": 20
+    },
+    "csv": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/computer_control_simulation.csv"
+  }
+]

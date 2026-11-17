@@ -1,0 +1,20 @@
+{
+  "appliance": "geyser",
+  "architecture": "LSTM(64)x2 + Dropout(0.2) + Dense(2)",
+  "input_steps": 4,
+  "output_steps": 2,
+  "epochs_run": 100,
+  "epochs_max": 100,
+  "early_stop_patience": 20,
+  "metrics": {
+    "rmse_watts": 427.89442427836207,
+    "mae_watts": 220.75877877373532,
+    "r2": 0.6958520949447671,
+    "nrmse_pct": 37.10943454976066,
+    "test_std_watts": 775.8793846571008,
+    "r2_reliable": true
+  },
+  "model_path": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/models_1h/lstm_geyser.keras",
+  "loss_curve": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results_1h/geyser_loss_curve.png",
+  "prediction_plot": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results_1h/geyser_prediction_vs_actual.png"
+}

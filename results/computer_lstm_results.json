@@ -1,0 +1,20 @@
+{
+  "appliance": "computer",
+  "architecture": "LSTM(64)x2 + Dropout(0.2) + Dense(2)",
+  "input_steps": 8,
+  "output_steps": 2,
+  "epochs_run": 37,
+  "epochs_max": 100,
+  "early_stop_patience": 20,
+  "metrics": {
+    "rmse_watts": 12.750299355166645,
+    "mae_watts": 7.795032749457949,
+    "r2": 0.3654321273566914,
+    "nrmse_pct": 41.16063723267514,
+    "test_std_watts": 16.005945769432586,
+    "r2_reliable": true
+  },
+  "model_path": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/models/lstm_computer.keras",
+  "loss_curve": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/computer_loss_curve.png",
+  "prediction_plot": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/computer_prediction_vs_actual.png"
+}

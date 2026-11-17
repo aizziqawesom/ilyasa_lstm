@@ -1,0 +1,21 @@
+step,current_w,predicted_w,cumulative_kwh,threshold_w,action,alert_tier,reason
+0,26.8,30.0,178.0,72.0,OK,green,Within normal range.
+1,33.3,34.1,179.1,72.0,OK,green,Within normal range.
+2,29.9,30.4,180.2,71.8,OK,green,Within normal range.
+3,0.1,11.1,181.3,70.6,OK,green,Within normal range.
+4,20.2,24.9,182.4,69.4,OK,green,Within normal range.
+5,26.0,27.5,183.5,68.2,OK,green,Within normal range.
+6,39.5,38.1,184.6,67.0,OK,green,Within normal range.
+7,17.6,28.0,185.7,65.8,OK,green,Within normal range.
+8,21.1,26.6,186.8,64.7,OK,green,Within normal range.
+9,30.3,31.8,187.9,63.5,OK,green,Within normal range.
+10,39.7,39.0,189.0,62.3,OK,green,Within normal range.
+11,28.9,30.6,190.1,61.1,OK,green,Within normal range.
+12,29.4,30.9,191.2,59.9,OK,green,Within normal range.
+13,49.2,41.1,192.3,58.7,OK,green,Within normal range.
+14,38.9,37.8,193.4,57.5,OK,green,Within normal range.
+15,38.1,37.0,194.5,56.3,OK,green,Within normal range.
+16,33.5,34.9,195.6,55.2,OK,green,Within normal range.
+17,37.8,35.0,196.7,54.0,OK,green,Within normal range.
+18,0.0,10.4,197.8,52.8,OK,green,Within normal range.
+19,31.1,32.3,198.9,51.6,OK,green,Within normal range.

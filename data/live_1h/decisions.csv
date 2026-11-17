@@ -1,0 +1,316 @@
+time,appliance,window_w,current_w,forecast_w,threshold_w,cumulative_kwh,action,tier,scale_factor,scaling,temp_c,humidity_pct,tariff,tou_period,reason
+2026-10-30T08:46:00+00:00,fan,50.1 49.9 50.6 50.1,50.1,50.08,57.43,156.391,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:01:00+00:00,fan,49.9 50.6 50.1 49.5,49.46,49.8,57.43,158.522,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:16:00+00:00,fan,50.6 50.1 49.5 50.4,50.36,49.94,57.43,160.652,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:31:00+00:00,fan,50.1 49.5 50.4 51.3,51.3,50.47,57.43,162.783,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:46:00+00:00,fan,49.5 50.4 51.3 50.9,50.95,50.64,57.43,164.913,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:01:00+00:00,fan,50.4 51.3 50.9 49.3,49.3,49.97,57.43,167.043,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:16:00+00:00,fan,51.3 50.9 49.3 48.7,48.73,49.45,57.43,169.174,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:31:00+00:00,fan,50.9 49.3 48.7 49.4,49.38,49.39,57.43,171.304,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:46:00+00:00,fan,49.3 48.7 49.4 50.0,50.04,49.64,57.43,173.435,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:01:00+00:00,fan,48.7 49.4 50.0 47.7,47.67,49.08,57.43,175.565,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:16:00+00:00,fan,49.4 50.0 47.7 49.8,49.78,49.31,57.43,177.696,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:31:00+00:00,fan,50.0 47.7 49.8 48.8,48.75,49.23,57.43,179.826,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:46:00+00:00,fan,47.7 49.8 48.8 49.3,49.27,49.3,55.75,181.957,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T12:01:00+00:00,fan,49.8 48.8 49.3 49.5,49.46,49.44,53.91,184.087,SHIFT,orange,1.48,on,,,TOU,PEAK,"High predicted load (49.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T12:16:00+00:00,fan,48.8 49.3 49.5 49.7,49.68,49.57,52.08,186.217,SHIFT,orange,1.48,on,,,TOU,PEAK,"High predicted load (49.6W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T12:31:00+00:00,fan,49.3 49.5 49.7 50.4,50.41,49.9,50.24,188.348,SHIFT,orange,1.48,on,,,TOU,PEAK,"High predicted load (49.9W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T12:46:00+00:00,fan,49.5 49.7 50.4 51.0,51.04,50.38,48.41,190.478,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:01:00+00:00,fan,49.7 50.4 51.0 49.9,49.87,50.13,46.57,192.609,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.1W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:16:00+00:00,fan,50.4 51.0 49.9 51.4,51.37,50.53,44.73,194.739,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.5W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:31:00+00:00,fan,51.0 49.9 51.4 49.3,49.33,49.97,42.9,196.87,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:46:00+00:00,fan,49.9 51.4 49.3 50.4,50.35,49.99,41.06,199.0,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T08:46:00+00:00,geyser,1527.1 1502.8 1477.7 1472.3,1472.35,1558.46,1620.0,156.13,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:01:00+00:00,geyser,1502.8 1477.7 1472.3 1486.3,1486.27,1551.96,1620.0,158.174,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:16:00+00:00,geyser,1477.7 1472.3 1486.3 1506.6,1506.61,1554.76,1620.0,160.217,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:31:00+00:00,geyser,1472.3 1486.3 1506.6 1469.7,1469.71,1554.09,1620.0,162.261,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:46:00+00:00,geyser,1486.3 1506.6 1469.7 1493.7,1493.72,1556.24,1620.0,164.304,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:01:00+00:00,geyser,1506.6 1469.7 1493.7 1495.2,1495.22,1557.52,1620.0,166.348,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:16:00+00:00,geyser,1469.7 1493.7 1495.2 1516.2,1516.23,1561.78,1620.0,168.391,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:31:00+00:00,geyser,1493.7 1495.2 1516.2 1506.4,1506.44,1568.03,1620.0,170.435,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:46:00+00:00,geyser,1495.2 1516.2 1506.4 1510.7,1510.66,1570.88,1620.0,172.478,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:01:00+00:00,geyser,1516.2 1506.4 1510.7 1480.4,1480.39,1566.74,1620.0,174.522,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:16:00+00:00,geyser,1506.4 1510.7 1480.4 1496.1,1496.11,1562.55,1620.0,176.565,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:31:00+00:00,geyser,1510.7 1480.4 1496.1 1523.5,1523.52,1566.22,1620.0,178.609,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:46:00+00:00,geyser,1480.4 1496.1 1523.5 1544.8,1544.8,1575.65,1604.15,180.652,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (98% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T12:01:00+00:00,geyser,1496.1 1523.5 1544.8 1462.2,1462.23,1571.49,1554.5,182.696,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1571W exceeds safety threshold 1554W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T12:16:00+00:00,geyser,1523.5 1544.8 1462.2 1545.4,1545.42,1576.9,1504.84,184.739,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1577W exceeds safety threshold 1505W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T12:31:00+00:00,geyser,1544.8 1462.2 1545.4 1540.4,1540.38,1581.58,1455.18,186.783,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1582W exceeds safety threshold 1455W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T12:46:00+00:00,geyser,1462.2 1545.4 1540.4 1523.4,1523.44,1582.28,1405.53,188.826,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1582W exceeds safety threshold 1406W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:01:00+00:00,geyser,1545.4 1540.4 1523.4 1507.9,1507.93,1585.2,1355.87,190.87,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1585W exceeds safety threshold 1356W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:16:00+00:00,geyser,1540.4 1523.4 1507.9 1490.6,1490.58,1574.49,1306.21,192.913,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1574W exceeds safety threshold 1306W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:31:00+00:00,geyser,1523.4 1507.9 1490.6 1543.7,1543.74,1575.9,1256.56,194.957,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1576W exceeds safety threshold 1257W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:46:00+00:00,geyser,1507.9 1490.6 1543.7 1558.8,1558.81,1585.46,1206.9,197.0,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1585W exceeds safety threshold 1207W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T08:46:00+00:00,lamp,3.1 3.1 3.0 2.9,2.93,2.98,3.45,156.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:01:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.98,3.45,158.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:16:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,3.45,160.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:31:00+00:00,lamp,2.9 3.0 3.0 2.9,2.92,2.97,3.45,162.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:46:00+00:00,lamp,3.0 3.0 2.9 3.0,3.02,2.99,3.45,164.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:01:00+00:00,lamp,3.0 2.9 3.0 3.0,3.03,3.0,3.45,166.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:16:00+00:00,lamp,2.9 3.0 3.0 3.0,3.04,3.02,3.45,168.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:31:00+00:00,lamp,3.0 3.0 3.0 2.9,2.93,2.98,3.45,170.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:46:00+00:00,lamp,3.0 3.0 2.9 3.0,2.96,2.97,3.45,172.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:01:00+00:00,lamp,3.0 2.9 3.0 3.0,2.97,2.97,3.45,174.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:16:00+00:00,lamp,2.9 3.0 3.0 2.9,2.93,2.96,3.45,176.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:31:00+00:00,lamp,3.0 3.0 2.9 3.1,3.1,3.01,3.45,178.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:46:00+00:00,lamp,3.0 2.9 3.1 3.0,2.97,3.0,3.45,180.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T12:01:00+00:00,lamp,2.9 3.1 3.0 3.0,3.02,3.0,3.34,182.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T12:16:00+00:00,lamp,3.1 3.0 3.0 3.0,2.98,2.99,3.24,184.0,NOTIFY,orange,24.667,on,,,TOU,PEAK,Approaching threshold (92% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T12:31:00+00:00,lamp,3.0 3.0 3.0 3.1,3.1,3.03,3.14,186.0,NOTIFY,orange,24.667,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T12:46:00+00:00,lamp,3.0 3.0 3.1 3.1,3.08,3.05,3.03,188.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 3.0W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:01:00+00:00,lamp,3.0 3.1 3.1 3.0,3.04,3.04,2.93,190.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.9W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:16:00+00:00,lamp,3.1 3.1 3.0 2.9,2.87,2.97,2.83,192.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.8W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:31:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.97,2.72,194.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.7W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:46:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,2.62,196.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.6W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T08:54:00+00:00,fan,50.1 49.9 50.6 50.1,50.1,50.08,57.43,156.391,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:09:00+00:00,fan,49.9 50.6 50.1 49.5,49.46,49.8,57.43,158.522,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:24:00+00:00,fan,50.6 50.1 49.5 50.4,50.36,49.94,57.43,160.652,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:39:00+00:00,fan,50.1 49.5 50.4 51.3,51.3,50.47,57.43,162.783,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:54:00+00:00,fan,49.5 50.4 51.3 50.9,50.95,50.64,57.43,164.913,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:09:00+00:00,fan,50.4 51.3 50.9 49.3,49.3,49.97,57.43,167.043,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:24:00+00:00,fan,51.3 50.9 49.3 48.7,48.73,49.45,57.43,169.174,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:39:00+00:00,fan,50.9 49.3 48.7 49.4,49.38,49.39,57.43,171.304,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:54:00+00:00,fan,49.3 48.7 49.4 50.0,50.04,49.64,57.43,173.435,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:09:00+00:00,fan,48.7 49.4 50.0 47.7,47.67,49.08,57.43,175.565,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:24:00+00:00,fan,49.4 50.0 47.7 49.8,49.78,49.31,57.43,177.696,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:39:00+00:00,fan,50.0 47.7 49.8 48.8,48.75,49.23,57.43,179.826,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:54:00+00:00,fan,47.7 49.8 48.8 49.3,49.27,49.3,55.75,181.957,OK,yellow,1.48,on,,,TOU,PEAK,Within normal range.
+2026-10-30T12:09:00+00:00,fan,49.8 48.8 49.3 49.5,49.46,49.44,53.91,184.087,SHIFT,orange,1.48,on,,,TOU,PEAK,"High predicted load (49.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T12:24:00+00:00,fan,48.8 49.3 49.5 49.7,49.68,49.57,52.08,186.217,SHIFT,orange,1.48,on,,,TOU,PEAK,"High predicted load (49.6W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T12:39:00+00:00,fan,49.3 49.5 49.7 50.4,50.41,49.9,50.24,188.348,SHIFT,orange,1.48,on,,,TOU,PEAK,"High predicted load (49.9W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T12:54:00+00:00,fan,49.5 49.7 50.4 51.0,51.04,50.38,48.41,190.478,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:09:00+00:00,fan,49.7 50.4 51.0 49.9,49.87,50.13,46.57,192.609,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.1W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:24:00+00:00,fan,50.4 51.0 49.9 51.4,51.37,50.53,44.73,194.739,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.5W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:39:00+00:00,fan,51.0 49.9 51.4 49.3,49.33,49.97,42.9,196.87,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T13:54:00+00:00,fan,49.9 51.4 49.3 50.4,50.35,49.99,41.06,199.0,SHIFT,red,1.48,on,,,TOU,PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-10-30T08:54:00+00:00,geyser,1527.1 1502.8 1477.7 1472.3,1472.35,1558.46,1620.0,156.13,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:09:00+00:00,geyser,1502.8 1477.7 1472.3 1486.3,1486.27,1551.96,1620.0,158.174,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:24:00+00:00,geyser,1477.7 1472.3 1486.3 1506.6,1506.61,1554.76,1620.0,160.217,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:39:00+00:00,geyser,1472.3 1486.3 1506.6 1469.7,1469.71,1554.09,1620.0,162.261,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T09:54:00+00:00,geyser,1486.3 1506.6 1469.7 1493.7,1493.72,1556.24,1620.0,164.304,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:09:00+00:00,geyser,1506.6 1469.7 1493.7 1495.2,1495.22,1557.52,1620.0,166.348,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:24:00+00:00,geyser,1469.7 1493.7 1495.2 1516.2,1516.23,1561.78,1620.0,168.391,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:39:00+00:00,geyser,1493.7 1495.2 1516.2 1506.4,1506.44,1568.03,1620.0,170.435,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T10:54:00+00:00,geyser,1495.2 1516.2 1506.4 1510.7,1510.66,1570.88,1620.0,172.478,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:09:00+00:00,geyser,1516.2 1506.4 1510.7 1480.4,1480.39,1566.74,1620.0,174.522,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:24:00+00:00,geyser,1506.4 1510.7 1480.4 1496.1,1496.11,1562.55,1620.0,176.565,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:39:00+00:00,geyser,1510.7 1480.4 1496.1 1523.5,1523.52,1566.22,1620.0,178.609,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T11:54:00+00:00,geyser,1480.4 1496.1 1523.5 1544.8,1544.8,1575.65,1604.15,180.652,NOTIFY,orange,1.0,on,,,TOU,PEAK,Approaching threshold (98% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T12:09:00+00:00,geyser,1496.1 1523.5 1544.8 1462.2,1462.23,1571.49,1554.5,182.696,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1571W exceeds safety threshold 1554W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T12:24:00+00:00,geyser,1523.5 1544.8 1462.2 1545.4,1545.42,1576.9,1504.84,184.739,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1577W exceeds safety threshold 1505W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T12:39:00+00:00,geyser,1544.8 1462.2 1545.4 1540.4,1540.38,1581.58,1455.18,186.783,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1582W exceeds safety threshold 1455W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T12:54:00+00:00,geyser,1462.2 1545.4 1540.4 1523.4,1523.44,1582.28,1405.53,188.826,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1582W exceeds safety threshold 1406W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:09:00+00:00,geyser,1545.4 1540.4 1523.4 1507.9,1507.93,1585.2,1355.87,190.87,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1585W exceeds safety threshold 1356W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:24:00+00:00,geyser,1540.4 1523.4 1507.9 1490.6,1490.58,1574.49,1306.21,192.913,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1574W exceeds safety threshold 1306W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:39:00+00:00,geyser,1523.4 1507.9 1490.6 1543.7,1543.74,1575.9,1256.56,194.957,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1576W exceeds safety threshold 1257W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T13:54:00+00:00,geyser,1507.9 1490.6 1543.7 1558.8,1558.81,1585.46,1206.9,197.0,CUTOFF,red,1.0,on,,,TOU,PEAK,"Predicted 1585W exceeds safety threshold 1207W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-10-30T08:54:00+00:00,lamp,3.1 3.1 3.0 2.9,2.93,2.98,3.45,156.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:09:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.98,3.45,158.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:24:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,3.45,160.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:39:00+00:00,lamp,2.9 3.0 3.0 2.9,2.92,2.97,3.45,162.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T09:54:00+00:00,lamp,3.0 3.0 2.9 3.0,3.02,2.99,3.45,164.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:09:00+00:00,lamp,3.0 2.9 3.0 3.0,3.03,3.0,3.45,166.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:24:00+00:00,lamp,2.9 3.0 3.0 3.0,3.04,3.02,3.45,168.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:39:00+00:00,lamp,3.0 3.0 3.0 2.9,2.93,2.98,3.45,170.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T10:54:00+00:00,lamp,3.0 3.0 2.9 3.0,2.96,2.97,3.45,172.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:09:00+00:00,lamp,3.0 2.9 3.0 3.0,2.97,2.97,3.45,174.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:24:00+00:00,lamp,2.9 3.0 3.0 2.9,2.93,2.96,3.45,176.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:39:00+00:00,lamp,3.0 3.0 2.9 3.1,3.1,3.01,3.45,178.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T11:54:00+00:00,lamp,3.0 2.9 3.1 3.0,2.97,3.0,3.45,180.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T12:09:00+00:00,lamp,2.9 3.1 3.0 3.0,3.02,3.0,3.34,182.0,OK,yellow,24.667,on,,,TOU,PEAK,Within normal range.
+2026-10-30T12:24:00+00:00,lamp,3.1 3.0 3.0 3.0,2.98,2.99,3.24,184.0,NOTIFY,orange,24.667,on,,,TOU,PEAK,Approaching threshold (92% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T12:39:00+00:00,lamp,3.0 3.0 3.0 3.1,3.1,3.03,3.14,186.0,NOTIFY,orange,24.667,on,,,TOU,PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-10-30T12:54:00+00:00,lamp,3.0 3.0 3.1 3.1,3.08,3.05,3.03,188.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 3.0W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:09:00+00:00,lamp,3.0 3.1 3.1 3.0,3.04,3.04,2.93,190.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.9W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:24:00+00:00,lamp,3.1 3.1 3.0 2.9,2.87,2.97,2.83,192.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.8W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:39:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.97,2.72,194.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.7W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-10-30T13:54:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,2.62,196.0,CUTOFF,red,24.667,on,,,TOU,PEAK,"Predicted 3.0W exceeds safety threshold 2.6W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-04T10:21:00+00:00,fan,50.1 49.9 50.6 50.1,50.1,50.08,57.43,156.391,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T10:36:00+00:00,fan,49.9 50.6 50.1 49.5,49.46,49.8,57.43,158.522,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T10:51:00+00:00,fan,50.6 50.1 49.5 50.4,50.36,49.94,57.43,160.652,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:06:00+00:00,fan,50.1 49.5 50.4 51.3,51.3,50.47,57.43,162.783,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:21:00+00:00,fan,49.5 50.4 51.3 50.9,50.95,50.64,57.43,164.913,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:36:00+00:00,fan,50.4 51.3 50.9 49.3,49.3,49.97,57.43,167.043,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:51:00+00:00,fan,51.3 50.9 49.3 48.7,48.73,49.45,57.43,169.174,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:06:00+00:00,fan,50.9 49.3 48.7 49.4,49.38,49.39,57.43,171.304,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:21:00+00:00,fan,49.3 48.7 49.4 50.0,50.04,49.64,57.43,173.435,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:36:00+00:00,fan,48.7 49.4 50.0 47.7,47.67,49.08,57.43,175.565,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:51:00+00:00,fan,49.4 50.0 47.7 49.8,49.78,49.31,57.43,177.696,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T13:06:00+00:00,fan,50.0 47.7 49.8 48.8,48.75,49.23,57.43,179.826,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T13:21:00+00:00,fan,47.7 49.8 48.8 49.3,49.27,49.3,55.75,181.957,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T13:36:00+00:00,fan,49.8 48.8 49.3 49.5,49.46,49.44,53.91,184.087,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T13:51:00+00:00,fan,48.8 49.3 49.5 49.7,49.68,49.57,52.08,186.217,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.6W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T14:06:00+00:00,fan,49.3 49.5 49.7 50.4,50.41,49.9,50.24,188.348,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.9W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T14:21:00+00:00,fan,49.5 49.7 50.4 51.0,51.04,50.38,48.41,190.478,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T14:36:00+00:00,fan,49.7 50.4 51.0 49.9,49.87,50.13,46.57,192.609,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.1W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T14:51:00+00:00,fan,50.4 51.0 49.9 51.4,51.37,50.53,44.73,194.739,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.5W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T15:06:00+00:00,fan,51.0 49.9 51.4 49.3,49.33,49.97,42.9,196.87,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T15:21:00+00:00,fan,49.9 51.4 49.3 50.4,50.35,49.99,41.06,199.0,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-04T10:21:00+00:00,geyser,1527.1 1502.8 1477.7 1472.3,1472.35,1558.46,1620.0,156.13,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T10:36:00+00:00,geyser,1502.8 1477.7 1472.3 1486.3,1486.27,1551.96,1620.0,158.174,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T10:51:00+00:00,geyser,1477.7 1472.3 1486.3 1506.6,1506.61,1554.76,1620.0,160.217,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T11:06:00+00:00,geyser,1472.3 1486.3 1506.6 1469.7,1469.71,1554.09,1620.0,162.261,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T11:21:00+00:00,geyser,1486.3 1506.6 1469.7 1493.7,1493.72,1556.24,1620.0,164.304,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T11:36:00+00:00,geyser,1506.6 1469.7 1493.7 1495.2,1495.22,1557.52,1620.0,166.348,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T11:51:00+00:00,geyser,1469.7 1493.7 1495.2 1516.2,1516.23,1561.78,1620.0,168.391,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T12:06:00+00:00,geyser,1493.7 1495.2 1516.2 1506.4,1506.44,1568.03,1620.0,170.435,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T12:21:00+00:00,geyser,1495.2 1516.2 1506.4 1510.7,1510.66,1570.88,1620.0,172.478,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T12:36:00+00:00,geyser,1516.2 1506.4 1510.7 1480.4,1480.39,1566.74,1620.0,174.522,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T12:51:00+00:00,geyser,1506.4 1510.7 1480.4 1496.1,1496.11,1562.55,1620.0,176.565,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T13:06:00+00:00,geyser,1510.7 1480.4 1496.1 1523.5,1523.52,1566.22,1620.0,178.609,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T13:21:00+00:00,geyser,1480.4 1496.1 1523.5 1544.8,1544.8,1575.65,1604.15,180.652,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (98% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T13:36:00+00:00,geyser,1496.1 1523.5 1544.8 1462.2,1462.23,1571.49,1554.5,182.696,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1571W exceeds safety threshold 1554W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T13:51:00+00:00,geyser,1523.5 1544.8 1462.2 1545.4,1545.42,1576.9,1504.84,184.739,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1577W exceeds safety threshold 1505W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T14:06:00+00:00,geyser,1544.8 1462.2 1545.4 1540.4,1540.38,1581.58,1455.18,186.783,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1582W exceeds safety threshold 1455W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T14:21:00+00:00,geyser,1462.2 1545.4 1540.4 1523.4,1523.44,1582.28,1405.53,188.826,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1582W exceeds safety threshold 1406W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T14:36:00+00:00,geyser,1545.4 1540.4 1523.4 1507.9,1507.93,1585.2,1355.87,190.87,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1585W exceeds safety threshold 1356W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T14:51:00+00:00,geyser,1540.4 1523.4 1507.9 1490.6,1490.58,1574.49,1306.21,192.913,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1574W exceeds safety threshold 1306W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T15:06:00+00:00,geyser,1523.4 1507.9 1490.6 1543.7,1543.74,1575.9,1256.56,194.957,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1576W exceeds safety threshold 1257W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T15:21:00+00:00,geyser,1507.9 1490.6 1543.7 1558.8,1558.81,1585.46,1206.9,197.0,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1585W exceeds safety threshold 1207W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-04T10:21:00+00:00,lamp,3.1 3.1 3.0 2.9,2.93,2.98,3.45,156.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T10:36:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.98,3.45,158.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T10:51:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,3.45,160.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:06:00+00:00,lamp,2.9 3.0 3.0 2.9,2.92,2.97,3.45,162.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:21:00+00:00,lamp,3.0 3.0 2.9 3.0,3.02,2.99,3.45,164.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:36:00+00:00,lamp,3.0 2.9 3.0 3.0,3.03,3.0,3.45,166.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T11:51:00+00:00,lamp,2.9 3.0 3.0 3.0,3.04,3.02,3.45,168.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:06:00+00:00,lamp,3.0 3.0 3.0 2.9,2.93,2.98,3.45,170.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:21:00+00:00,lamp,3.0 3.0 2.9 3.0,2.96,2.97,3.45,172.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:36:00+00:00,lamp,3.0 2.9 3.0 3.0,2.97,2.97,3.45,174.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T12:51:00+00:00,lamp,2.9 3.0 3.0 2.9,2.93,2.96,3.45,176.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T13:06:00+00:00,lamp,3.0 3.0 2.9 3.1,3.1,3.01,3.45,178.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T13:21:00+00:00,lamp,3.0 2.9 3.1 3.0,2.97,3.0,3.45,180.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T13:36:00+00:00,lamp,2.9 3.1 3.0 3.0,3.02,3.0,3.34,182.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-04T13:51:00+00:00,lamp,3.1 3.0 3.0 3.0,2.98,2.99,3.24,184.0,NOTIFY,orange,24.667,on,,,TOU,OFF-PEAK,Approaching threshold (92% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T14:06:00+00:00,lamp,3.0 3.0 3.0 3.1,3.1,3.03,3.14,186.0,NOTIFY,orange,24.667,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-04T14:21:00+00:00,lamp,3.0 3.0 3.1 3.1,3.08,3.05,3.03,188.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 3.0W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-04T14:36:00+00:00,lamp,3.0 3.1 3.1 3.0,3.04,3.04,2.93,190.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.9W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-04T14:51:00+00:00,lamp,3.1 3.1 3.0 2.9,2.87,2.97,2.83,192.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.8W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-04T15:06:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.97,2.72,194.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.7W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-04T15:21:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,2.62,196.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.6W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T05:12:00+00:00,fan,50.1 49.9 50.6 50.1,50.1,50.08,57.43,156.391,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:27:00+00:00,fan,49.9 50.6 50.1 49.5,49.46,49.8,57.43,158.522,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:42:00+00:00,fan,50.6 50.1 49.5 50.4,50.36,49.94,57.43,160.652,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:57:00+00:00,fan,50.1 49.5 50.4 51.3,51.3,50.47,57.43,162.783,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:12:00+00:00,fan,49.5 50.4 51.3 50.9,50.95,50.64,57.43,164.913,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:27:00+00:00,fan,50.4 51.3 50.9 49.3,49.3,49.97,57.43,167.043,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:42:00+00:00,fan,51.3 50.9 49.3 48.7,48.73,49.45,57.43,169.174,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:57:00+00:00,fan,50.9 49.3 48.7 49.4,49.38,49.39,57.43,171.304,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:12:00+00:00,fan,49.3 48.7 49.4 50.0,50.04,49.64,57.43,173.435,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:27:00+00:00,fan,48.7 49.4 50.0 47.7,47.67,49.08,57.43,175.565,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:42:00+00:00,fan,49.4 50.0 47.7 49.8,49.78,49.31,57.43,177.696,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:57:00+00:00,fan,50.0 47.7 49.8 48.8,48.75,49.23,57.43,179.826,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:12:00+00:00,fan,47.7 49.8 48.8 49.3,49.27,49.3,55.75,181.957,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:27:00+00:00,fan,49.8 48.8 49.3 49.5,49.46,49.44,53.91,184.087,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T08:42:00+00:00,fan,48.8 49.3 49.5 49.7,49.68,49.57,52.08,186.217,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.6W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T08:57:00+00:00,fan,49.3 49.5 49.7 50.4,50.41,49.9,50.24,188.348,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.9W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:12:00+00:00,fan,49.5 49.7 50.4 51.0,51.04,50.38,48.41,190.478,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:27:00+00:00,fan,49.7 50.4 51.0 49.9,49.87,50.13,46.57,192.609,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.1W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:42:00+00:00,fan,50.4 51.0 49.9 51.4,51.37,50.53,44.73,194.739,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.5W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:57:00+00:00,fan,51.0 49.9 51.4 49.3,49.33,49.97,42.9,196.87,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T10:12:00+00:00,fan,49.9 51.4 49.3 50.4,50.35,49.99,41.06,199.0,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T05:12:00+00:00,geyser,1527.1 1502.8 1477.7 1472.3,1472.35,1558.46,1620.0,156.13,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T05:27:00+00:00,geyser,1502.8 1477.7 1472.3 1486.3,1486.27,1551.96,1620.0,158.174,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T05:42:00+00:00,geyser,1477.7 1472.3 1486.3 1506.6,1506.61,1554.76,1620.0,160.217,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T05:57:00+00:00,geyser,1472.3 1486.3 1506.6 1469.7,1469.71,1554.09,1620.0,162.261,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:12:00+00:00,geyser,1486.3 1506.6 1469.7 1493.7,1493.72,1556.24,1620.0,164.304,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:27:00+00:00,geyser,1506.6 1469.7 1493.7 1495.2,1495.22,1557.52,1620.0,166.348,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:42:00+00:00,geyser,1469.7 1493.7 1495.2 1516.2,1516.23,1561.78,1620.0,168.391,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:57:00+00:00,geyser,1493.7 1495.2 1516.2 1506.4,1506.44,1568.03,1620.0,170.435,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:12:00+00:00,geyser,1495.2 1516.2 1506.4 1510.7,1510.66,1570.88,1620.0,172.478,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:27:00+00:00,geyser,1516.2 1506.4 1510.7 1480.4,1480.39,1566.74,1620.0,174.522,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:42:00+00:00,geyser,1506.4 1510.7 1480.4 1496.1,1496.11,1562.55,1620.0,176.565,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:57:00+00:00,geyser,1510.7 1480.4 1496.1 1523.5,1523.52,1566.22,1620.0,178.609,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T08:12:00+00:00,geyser,1480.4 1496.1 1523.5 1544.8,1544.8,1575.65,1604.15,180.652,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (98% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T08:27:00+00:00,geyser,1496.1 1523.5 1544.8 1462.2,1462.23,1571.49,1554.5,182.696,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1571W exceeds safety threshold 1554W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T08:42:00+00:00,geyser,1523.5 1544.8 1462.2 1545.4,1545.42,1576.9,1504.84,184.739,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1577W exceeds safety threshold 1505W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T08:57:00+00:00,geyser,1544.8 1462.2 1545.4 1540.4,1540.38,1581.58,1455.18,186.783,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1582W exceeds safety threshold 1455W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:12:00+00:00,geyser,1462.2 1545.4 1540.4 1523.4,1523.44,1582.28,1405.53,188.826,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1582W exceeds safety threshold 1406W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:27:00+00:00,geyser,1545.4 1540.4 1523.4 1507.9,1507.93,1585.2,1355.87,190.87,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1585W exceeds safety threshold 1356W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:42:00+00:00,geyser,1540.4 1523.4 1507.9 1490.6,1490.58,1574.49,1306.21,192.913,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1574W exceeds safety threshold 1306W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:57:00+00:00,geyser,1523.4 1507.9 1490.6 1543.7,1543.74,1575.9,1256.56,194.957,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1576W exceeds safety threshold 1257W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T10:12:00+00:00,geyser,1507.9 1490.6 1543.7 1558.8,1558.81,1585.46,1206.9,197.0,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1585W exceeds safety threshold 1207W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T05:12:00+00:00,lamp,3.1 3.1 3.0 2.9,2.93,2.98,3.45,156.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:27:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.98,3.45,158.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:42:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,3.45,160.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:57:00+00:00,lamp,2.9 3.0 3.0 2.9,2.92,2.97,3.45,162.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:12:00+00:00,lamp,3.0 3.0 2.9 3.0,3.02,2.99,3.45,164.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:27:00+00:00,lamp,3.0 2.9 3.0 3.0,3.03,3.0,3.45,166.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:42:00+00:00,lamp,2.9 3.0 3.0 3.0,3.04,3.02,3.45,168.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:57:00+00:00,lamp,3.0 3.0 3.0 2.9,2.93,2.98,3.45,170.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:12:00+00:00,lamp,3.0 3.0 2.9 3.0,2.96,2.97,3.45,172.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:27:00+00:00,lamp,3.0 2.9 3.0 3.0,2.97,2.97,3.45,174.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:42:00+00:00,lamp,2.9 3.0 3.0 2.9,2.93,2.96,3.45,176.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:57:00+00:00,lamp,3.0 3.0 2.9 3.1,3.1,3.01,3.45,178.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:12:00+00:00,lamp,3.0 2.9 3.1 3.0,2.97,3.0,3.45,180.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:27:00+00:00,lamp,2.9 3.1 3.0 3.0,3.02,3.0,3.34,182.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:42:00+00:00,lamp,3.1 3.0 3.0 3.0,2.98,2.99,3.24,184.0,NOTIFY,orange,24.667,on,,,TOU,OFF-PEAK,Approaching threshold (92% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T08:57:00+00:00,lamp,3.0 3.0 3.0 3.1,3.1,3.03,3.14,186.0,NOTIFY,orange,24.667,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T09:12:00+00:00,lamp,3.0 3.0 3.1 3.1,3.08,3.05,3.03,188.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 3.0W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T09:27:00+00:00,lamp,3.0 3.1 3.1 3.0,3.04,3.04,2.93,190.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.9W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T09:42:00+00:00,lamp,3.1 3.1 3.0 2.9,2.87,2.97,2.83,192.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.8W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T09:57:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.97,2.72,194.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.7W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T10:12:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,2.62,196.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.6W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T05:20:00+00:00,fan,50.1 49.9 50.6 50.1,50.1,50.08,57.43,156.391,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:35:00+00:00,fan,49.9 50.6 50.1 49.5,49.46,49.8,57.43,158.522,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:50:00+00:00,fan,50.6 50.1 49.5 50.4,50.36,49.94,57.43,160.652,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:05:00+00:00,fan,50.1 49.5 50.4 51.3,51.3,50.47,57.43,162.783,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:20:00+00:00,fan,49.5 50.4 51.3 50.9,50.95,50.64,57.43,164.913,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:35:00+00:00,fan,50.4 51.3 50.9 49.3,49.3,49.97,57.43,167.043,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:50:00+00:00,fan,51.3 50.9 49.3 48.7,48.73,49.45,57.43,169.174,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:05:00+00:00,fan,50.9 49.3 48.7 49.4,49.38,49.39,57.43,171.304,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:20:00+00:00,fan,49.3 48.7 49.4 50.0,50.04,49.64,57.43,173.435,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:35:00+00:00,fan,48.7 49.4 50.0 47.7,47.67,49.08,57.43,175.565,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:50:00+00:00,fan,49.4 50.0 47.7 49.8,49.78,49.31,57.43,177.696,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:05:00+00:00,fan,50.0 47.7 49.8 48.8,48.75,49.23,57.43,179.826,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:20:00+00:00,fan,47.7 49.8 48.8 49.3,49.27,49.3,55.75,181.957,OK,yellow,1.48,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:35:00+00:00,fan,49.8 48.8 49.3 49.5,49.46,49.44,53.91,184.087,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T08:50:00+00:00,fan,48.8 49.3 49.5 49.7,49.68,49.57,52.08,186.217,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.6W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:05:00+00:00,fan,49.3 49.5 49.7 50.4,50.41,49.9,50.24,188.348,SHIFT,orange,1.48,on,,,TOU,OFF-PEAK,"High predicted load (49.9W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:20:00+00:00,fan,49.5 49.7 50.4 51.0,51.04,50.38,48.41,190.478,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.4W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:35:00+00:00,fan,49.7 50.4 51.0 49.9,49.87,50.13,46.57,192.609,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.1W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T09:50:00+00:00,fan,50.4 51.0 49.9 51.4,51.37,50.53,44.73,194.739,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.5W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T10:05:00+00:00,fan,51.0 49.9 51.4 49.3,49.33,49.97,42.9,196.87,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T10:20:00+00:00,fan,49.9 51.4 49.3 50.4,50.35,49.99,41.06,199.0,SHIFT,red,1.48,on,,,TOU,OFF-PEAK,"High predicted load (50.0W) near a TNB tier boundary -- comfort item, deferred/soft-shifted rather than cut."
+2026-11-14T05:20:00+00:00,geyser,1527.1 1502.8 1477.7 1472.3,1472.35,1558.46,1620.0,156.13,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T05:35:00+00:00,geyser,1502.8 1477.7 1472.3 1486.3,1486.27,1551.96,1620.0,158.174,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T05:50:00+00:00,geyser,1477.7 1472.3 1486.3 1506.6,1506.61,1554.76,1620.0,160.217,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:05:00+00:00,geyser,1472.3 1486.3 1506.6 1469.7,1469.71,1554.09,1620.0,162.261,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:20:00+00:00,geyser,1486.3 1506.6 1469.7 1493.7,1493.72,1556.24,1620.0,164.304,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:35:00+00:00,geyser,1506.6 1469.7 1493.7 1495.2,1495.22,1557.52,1620.0,166.348,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T06:50:00+00:00,geyser,1469.7 1493.7 1495.2 1516.2,1516.23,1561.78,1620.0,168.391,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:05:00+00:00,geyser,1493.7 1495.2 1516.2 1506.4,1506.44,1568.03,1620.0,170.435,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:20:00+00:00,geyser,1495.2 1516.2 1506.4 1510.7,1510.66,1570.88,1620.0,172.478,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:35:00+00:00,geyser,1516.2 1506.4 1510.7 1480.4,1480.39,1566.74,1620.0,174.522,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T07:50:00+00:00,geyser,1506.4 1510.7 1480.4 1496.1,1496.11,1562.55,1620.0,176.565,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (96% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T08:05:00+00:00,geyser,1510.7 1480.4 1496.1 1523.5,1523.52,1566.22,1620.0,178.609,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T08:20:00+00:00,geyser,1480.4 1496.1 1523.5 1544.8,1544.8,1575.65,1604.15,180.652,NOTIFY,orange,1.0,on,,,TOU,OFF-PEAK,Approaching threshold (98% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T08:35:00+00:00,geyser,1496.1 1523.5 1544.8 1462.2,1462.23,1571.49,1554.5,182.696,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1571W exceeds safety threshold 1554W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T08:50:00+00:00,geyser,1523.5 1544.8 1462.2 1545.4,1545.42,1576.9,1504.84,184.739,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1577W exceeds safety threshold 1505W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:05:00+00:00,geyser,1544.8 1462.2 1545.4 1540.4,1540.38,1581.58,1455.18,186.783,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1582W exceeds safety threshold 1455W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:20:00+00:00,geyser,1462.2 1545.4 1540.4 1523.4,1523.44,1582.28,1405.53,188.826,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1582W exceeds safety threshold 1406W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:35:00+00:00,geyser,1545.4 1540.4 1523.4 1507.9,1507.93,1585.2,1355.87,190.87,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1585W exceeds safety threshold 1356W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T09:50:00+00:00,geyser,1540.4 1523.4 1507.9 1490.6,1490.58,1574.49,1306.21,192.913,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1574W exceeds safety threshold 1306W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T10:05:00+00:00,geyser,1523.4 1507.9 1490.6 1543.7,1543.74,1575.9,1256.56,194.957,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1576W exceeds safety threshold 1257W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T10:20:00+00:00,geyser,1507.9 1490.6 1543.7 1558.8,1558.81,1585.46,1206.9,197.0,CUTOFF,red,1.0,on,,,TOU,OFF-PEAK,"Predicted 1585W exceeds safety threshold 1207W (near a TNB tier boundary, adjusted from 1620W) -- predictive cutoff, water heater is a hard-safety appliance."
+2026-11-14T05:20:00+00:00,lamp,3.1 3.1 3.0 2.9,2.93,2.98,3.45,156.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:35:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.98,3.45,158.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T05:50:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,3.45,160.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:05:00+00:00,lamp,2.9 3.0 3.0 2.9,2.92,2.97,3.45,162.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:20:00+00:00,lamp,3.0 3.0 2.9 3.0,3.02,2.99,3.45,164.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:35:00+00:00,lamp,3.0 2.9 3.0 3.0,3.03,3.0,3.45,166.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T06:50:00+00:00,lamp,2.9 3.0 3.0 3.0,3.04,3.02,3.45,168.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:05:00+00:00,lamp,3.0 3.0 3.0 2.9,2.93,2.98,3.45,170.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:20:00+00:00,lamp,3.0 3.0 2.9 3.0,2.96,2.97,3.45,172.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:35:00+00:00,lamp,3.0 2.9 3.0 3.0,2.97,2.97,3.45,174.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T07:50:00+00:00,lamp,2.9 3.0 3.0 2.9,2.93,2.96,3.45,176.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:05:00+00:00,lamp,3.0 3.0 2.9 3.1,3.1,3.01,3.45,178.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:20:00+00:00,lamp,3.0 2.9 3.1 3.0,2.97,3.0,3.45,180.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:35:00+00:00,lamp,2.9 3.1 3.0 3.0,3.02,3.0,3.34,182.0,OK,yellow,24.667,on,,,TOU,OFF-PEAK,Within normal range.
+2026-11-14T08:50:00+00:00,lamp,3.1 3.0 3.0 3.0,2.98,2.99,3.24,184.0,NOTIFY,orange,24.667,on,,,TOU,OFF-PEAK,Approaching threshold (92% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T09:05:00+00:00,lamp,3.0 3.0 3.0 3.1,3.1,3.03,3.14,186.0,NOTIFY,orange,24.667,on,,,TOU,OFF-PEAK,Approaching threshold (97% of limit) -- pre-emptive warning before cutoff.
+2026-11-14T09:20:00+00:00,lamp,3.0 3.0 3.1 3.1,3.08,3.05,3.03,188.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 3.0W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T09:35:00+00:00,lamp,3.0 3.1 3.1 3.0,3.04,3.04,2.93,190.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.9W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T09:50:00+00:00,lamp,3.1 3.1 3.0 2.9,2.87,2.97,2.83,192.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.8W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T10:05:00+00:00,lamp,3.1 3.0 2.9 3.0,3.0,2.97,2.72,194.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.7W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."
+2026-11-14T10:20:00+00:00,lamp,3.0 2.9 3.0 3.0,3.04,3.0,2.62,196.0,CUTOFF,red,24.667,on,,,TOU,OFF-PEAK,"Predicted 3.0W exceeds safety threshold 2.6W (near a TNB tier boundary, adjusted from 3.4W) -- predictive cutoff, lamp is standing in for the water heater's hard-safety cutoff."

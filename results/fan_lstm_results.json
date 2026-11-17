@@ -1,0 +1,20 @@
+{
+  "appliance": "fan",
+  "architecture": "LSTM(64)x2 + Dropout(0.2) + Dense(2)",
+  "input_steps": 8,
+  "output_steps": 2,
+  "epochs_run": 28,
+  "epochs_max": 100,
+  "early_stop_patience": 20,
+  "metrics": {
+    "rmse_watts": 1.0147649608889913,
+    "mae_watts": 0.7609417132634545,
+    "r2": -0.11800903485937986,
+    "nrmse_pct": 1.376273800591172,
+    "test_std_watts": 0.959716157093689,
+    "r2_reliable": true
+  },
+  "model_path": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/models/lstm_fan.keras",
+  "loss_curve": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/fan_loss_curve.png",
+  "prediction_plot": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/fan_prediction_vs_actual.png"
+}

@@ -1,0 +1,16 @@
+{
+  "appliance": "computer",
+  "model": "ARIMA(2, 1, 2)",
+  "forecast_horizon_steps": 2,
+  "n_forecast_chunks": 75,
+  "metrics": {
+    "rmse_watts": 8.99316136701796,
+    "mae_watts": 4.995623796439302,
+    "r2": 0.6251272841513416,
+    "nrmse_pct": 25.455578393423213,
+    "test_std_watts": 14.688264004990994,
+    "r2_reliable": true
+  },
+  "prediction_plot": "/sessions/focused-charming-davinci/mnt/outputs/ilyasa_lstm/results/computer_arima_prediction_vs_actual.png",
+  "note": "Rolling-origin forecast, refit each chunk on expanding history, capped at 60 chunks for runtime."
+}

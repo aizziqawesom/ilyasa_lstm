@@ -1,0 +1,150 @@
+ARAHAN MENGGUNAKAN DASHBOARD ILYASA (PSM2)
+==========================================
+
+APA ITU DASHBOARD INI?
+----------------------
+Satu laman web (dalam browser) untuk tunjuk sistem kawalan tenaga:
+1. Soket pintar ukur kuasa (watt) perkakas.
+2. Model LSTM tengok bacaan sejam lepas, kemudian ramal kuasa 30 minit akan datang.
+3. Sistem bandingkan ramalan dengan HAD (threshold) dan buat KEPUTUSAN.
+4. Had jadi lebih ketat bila penggunaan bulan ini hampir ke tahap harga TNB
+   seterusnya (200 / 300 / 600 / 900 kWh).
+
+
+BAHAGIAN 1: PASANG (SEKALI SAHAJA)
+----------------------------------
+1. Pastikan Python 3.10 atau lebih baru dipasang.
+2. Buka Command Prompt dalam folder "scripts" dan taip:
+
+      pip install -r ../requirements.txt
+
+3. Selesai. Tak perlu buat lagi.
+
+
+BAHAGIAN 2: BUKA DASHBOARD
+--------------------------
+1. Dalam folder ilyasa_lstm, klik dua kali fail:
+
+      run_dashboard.bat
+
+2. Browser akan buka sendiri. Kalau tidak, buka: http://localhost:8501
+3. Tunggu sebentar kali pertama (model sedang dimuatkan).
+4. Untuk tutup: tutup tetingkap hitam (Command Prompt) tadi.
+
+
+BAHAGIAN 3: DEMO TANPA LITAR / HARDWARE
+---------------------------------------
+Guna kalau tiada ESP32 atau soket. Semua dalam tab "Control panel".
+
+1. Pilih "Demo without hardware".
+2. Tekan "Fill dashboard with simulated data".
+   -> Tunggu sehingga siap. Ini isi tab Live dan Today dengan data simulasi.
+3. Buka tab "Live decisions" untuk lihat keputusan.
+4. (Pilihan) "Instant scenario": pilih satu situasi, tekan "Run scenario".
+   Contoh yang bagus untuk tunjuk:
+      heater_normal        -> pemanas 1500W, penggunaan 150 kWh -> NOTIFY
+      heater_near_tariff   -> pemanas sama, 195 kWh -> CUTOFF (had makin ketat)
+      fan_offpeak          -> kipas pukul 11 pagi -> OK
+      fan_peak             -> kipas pukul 3 petang -> SHIFT (waktu mahal)
+5. Tekan "Clear simulated / live logs" untuk kosongkan semula.
+
+NOTA PENTING: data ini ialah SCENARIO, bukan bacaan sensor sebenar.
+Beritahu panel/penyelia dengan jujur kalau tunjuk bahagian ini.
+
+
+BAHAGIAN 4: GUNA DENGAN HARDWARE SEBENAR
+----------------------------------------
+Syarat: ESP32 dihidupkan dan hantar data ke Blynk. BLYNK_TOKEN sudah diisi
+dalam fail scripts\live_control_loop.py.
+
+1. Dalam tab "Control panel", pilih "Live with hardware (ESP32 + Blynk)".
+2. Pilih:
+   - Appliance plugged in : lamp / fan / geyser (yang betul-betul disambung)
+   - Seconds between readings : 30 untuk ujian cepat, 900 untuk mod sebenar
+   - Month's kWh so far : penggunaan bulan ini setakat ini
+   - Tariff : TNB ToU atau Normal (A)
+3. Tekan "Start live loop". Keputusan pertama keluar lebih kurang 2 minit
+   (mod 30 saat). Mod 900 saat ambil lebih kurang 1 jam.
+4. Tengok tab "Live decisions".
+5. Bila habis, tekan "Stop live loop" DULU sebelum tutup dashboard.
+
+KESELAMATAN: Ujian dulu dengan lampu kecil. Jangan terus guna pemanas air
+sebenar. Ikut firmware\BUILD_GUIDE.md untuk wayar voltan tinggi.
+
+
+BAHAGIAN 5: APA DALAM SETIAP TAB?
+---------------------------------
+Control panel        Tempat tekan butang: demo, simulasi, mula/henti live.
+Today: power & price Kuasa dan kos hari ini untuk setiap perkakas.
+Live decisions       Halaman utama demo. Semua keputusan sistem.
+Dataset              Data iAWE yang digunakan untuk latih model (bukan live).
+Model                Ketepatan LSTM berbanding ARIMA.
+Decision logic       Graf had berubah + kotak "what-if" untuk cuba nombor sendiri.
+
+Di sebelah kiri (sidebar):
+  Model set      : 1-hour (disyorkan) atau 2-hour. Kedua-duanya ramal 30 minit.
+  Appliance      : perkakas yang dipaparkan dalam tab-tab.
+  Auto-refresh   : berapa kerap tab Live dan Today muat semula.
+  Wattage mapping: skala perkakas kecil (cth. lampu 3W) supaya sesuai dengan
+                   saiz data latihan model.
+
+
+BAHAGIAN 6: APA MAKSUD GARIS DAN WARNA?
+---------------------------------------
+Tab Today:
+  Garis biru penuh       = bacaan sebenar hari ini
+  Garis kelabu putus     = purata hari biasa (data latihan)
+  Garis oren putus       = ramalan LSTM
+  Garis merah menegak    = sekarang
+  Jalur kelabu           = waktu puncak ToU (2 petang - 10 malam, hari bekerja)
+  Garis ungu             = harga (sen/kWh)
+
+Tab Live decisions:
+  Garis biru penuh       = kuasa sebenar
+  Garis oren putus       = ramalan LSTM (30 minit akan datang)
+  Garis kelabu bertitik  = had (turun bila hampir tahap TNB seterusnya)
+  Tanda warna di bawah   = keputusan pada masa itu
+
+Keputusan:
+  OK (hijau)       Tiada tindakan.
+  NOTIFY (kuning)  Beri amaran sahaja. Untuk laptop (tak pernah dipotong).
+  SHIFT (oren)     Syor tunda guna ke waktu lebih murah. Untuk kipas.
+  CUTOFF (merah)   Buzzer bunyi, kemudian relay potong bekalan. Untuk pemanas
+                   air dan lampu ujian.
+
+Tab Model:
+  RMSE / MAE = purata ralat dalam watt. Lagi KECIL lagi bagus.
+  R2         = 1 sempurna, 0 sama macam teka purata, negatif lebih teruk.
+  Jujur: ARIMA lebih baik untuk laptop dan RMSE kipas; LSTM lebih baik untuk
+  proksi pemanas air.
+
+
+BAHAGIAN 7: MASALAH BIASA
+-------------------------
+Tab Live kosong
+   -> Belum ada keputusan. Guna "Fill dashboard with simulated data" atau
+      mulakan live loop dan tunggu.
+
+Ralat "unexpected keyword argument 'width'"
+   -> Sudah dibaiki. Pastikan guna dashboard.py yang terkini.
+
+"ModuleNotFoundError"
+   -> Ulang Bahagian 1 (pip install).
+
+Butang live tak berfungsi
+   -> Semak ESP32 hidup, WiFi, dan BLYNK_TOKEN dalam live_control_loop.py.
+
+Tutup dashboard tapi live loop masih jalan
+   -> Tekan "Stop live loop" dahulu sebelum tutup, atau tutup tetingkap
+      Python di Task Manager.
+
+
+RINGKASAN PANTAS UNTUK VIVA
+---------------------------
+1. Klik run_dashboard.bat.
+2. Control panel -> Demo without hardware -> Fill dashboard with simulated data.
+3. Live decisions -> tunjuk garis dan keputusan.
+4. Control panel -> scenario heater_normal, kemudian heater_near_tariff ->
+   tunjuk keputusan berubah dari NOTIFY ke CUTOFF.
+5. Decision logic -> tunjuk graf had turun bila hampir 200 kWh.
+6. Model -> tunjuk LSTM vs ARIMA dengan jujur.
