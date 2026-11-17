@@ -112,9 +112,9 @@ def main():
             print(f"[{now}] reading {len(window)}/4: {w:.1f} W  (collecting, no decision yet)")
         else:
             pred = loop.predict_next(appliance, np.array(window))
-            blynk_chart.push(appliance)   # Blynk chart lines V21 (LSTM, lined up) + V22 (historical)
             tou = loop.current_tou(kwh)
             d = decide(appliance, w, pred, kwh, tou=tou)
+            blynk_chart.push(appliance, d.threshold_w)   # Blynk chart lines V21 LSTM, V22 historical, V23 limit
             tlabel = f"ToU {tou.period}" if tou else "Tariff A"
             print(f"[{now}] now {w:.1f} W | forecast {pred:.1f} W | limit {d.threshold_w:.1f} W "
                   f"-> {d.action.value} ({d.alert_tier.value})  [mapping {'on' if loop.SCALING_ENABLED else 'off'}, {tlabel}]")

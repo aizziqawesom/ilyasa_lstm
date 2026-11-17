@@ -8,6 +8,8 @@ Extra lines for the Blynk "Power history" chart, next to V0 (actual power):
   V22 "Historical avg" = the iAWE training-data average for this 15-min slot of the day,
                          in the real appliance's watts (same as the grey line on the
                          dashboard's Today tab).
+  V23 "Limit"          = the threshold the decision used at this moment, in real watts (it drops
+                         near a TNB bracket or in ToU peak). When orange goes above it, the rules act.
 
 Used by live_control_fast.py and live_control_loop_1h.py. Kept in its own file so
 live_control_loop.py (where BLYNK_TOKEN lives) does not need editing.
@@ -23,7 +25,7 @@ import requests
 import live_control_loop as loop
 import tou_pricing
 
-LSTM_PIN, HIST_PIN = "V21", "V22"
+LSTM_PIN, HIST_PIN, LIMIT_PIN = "V21", "V22", "V23"
 _state = {"next_step_w": None, "pending_w": None, "hist": {}, "warned": False}
 
 
@@ -43,7 +45,8 @@ def install() -> None:
         return float(np.max(y))   # same value the original returns (max of the 2 steps)
 
     def log_decision(ts, appliance, *args, **kwargs):
-        push(appliance)
+        decision = args[4] if len(args) > 4 else kwargs.get("decision")
+        push(appliance, getattr(decision, "threshold_w", None))
         return orig_log(ts, appliance, *args, **kwargs)
 
     loop.predict_next, loop.log_decision = predict_next, log_decision
@@ -68,8 +71,8 @@ def historical_now_w(appliance: str) -> float | None:
     return float(prof[now.hour * 4 + now.minute // 15]) / loop.scale_factor(appliance)
 
 
-def push(appliance: str) -> None:
-    """Call once per cycle, after the forecast. Sends V21 (lined-up LSTM) and V22 (historical)."""
+def push(appliance: str, threshold_w: float | None = None) -> None:
+    """Call once per cycle, after the decision. Sends V21 (lined-up LSTM), V22 (historical), V23 (limit)."""
     if loop.BLYNK_TOKEN.startswith("YOUR_"):
         return
     vals = {}
@@ -79,11 +82,13 @@ def push(appliance: str) -> None:
     hist = historical_now_w(appliance)
     if hist is not None:
         vals[HIST_PIN] = round(hist, 2)
+    if threshold_w is not None:
+        vals[LIMIT_PIN] = round(float(threshold_w), 2)
     for pin, v in vals.items():
         try:
             loop.blynk_update(pin, v)
         except requests.RequestException as e:
             if not _state["warned"]:
-                print(f"   chart push to Blynk {pin} failed ({e}). Create datastreams V21 and V22 in Blynk "
+                print(f"   chart push to Blynk {pin} failed ({e}). Create datastreams V21, V22 and V23 in Blynk "
                       "(see RUN_GUIDE_SIMPLE.md); the control loop keeps working without them.")
                 _state["warned"] = True

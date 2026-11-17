@@ -104,9 +104,9 @@ def main():
                 window = w[i - 3:i + 1]
                 kwh = k0 + (k1 - k0) * i / (a.steps - 1)
                 pred = loop.predict_next(a.appliance, window)
-                blynk_chart.push(a.appliance)                          # V21 + V22
                 tou = loop.current_tou(kwh)
                 d = decide(a.appliance, now_w, pred, kwh, tou=tou)
+                blynk_chart.push(a.appliance, d.threshold_w)           # V21 + V22 + V23
                 print(f"step {i + 1:2d}: {now_w:8.1f} W | forecast {pred:8.1f} W | limit {d.threshold_w:8.1f} W "
                       f"| {kwh:5.1f} kWh -> {d.action.value}")
                 if not a.no_control and d.action != last_action:

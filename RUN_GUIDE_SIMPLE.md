@@ -177,6 +177,14 @@ Important honesty note: at 30 s steps the model is fed 30-second readings althou
 
 ---
 
+### 4b-demo. Real ESP32, fake readings (no mains needed)
+Sketch: `firmware\ilyasa_esp32_demo\ilyasa_esp32_demo.ino`. Same as the main sketch, but the ESP32 makes up the PZEM readings itself (water heater 1500 W by default, with a short 15 % spike every 5 minutes so the LSTM has something to react to). Everything after the reading is real: Blynk, Python LSTM, decision, buzzer, LCD, relay. If the relay cuts, the fake power drops to 0 W, so the cut shows on the Blynk chart.
+1. Fill in the token and WiFi (template ID is already set), pick `DEMO_APPLIANCE` (0 heater, 1 fan, 2 lamp), flash it. USB power only; leave the relay output disconnected from mains.
+2. LCD shows `Ilyasa DEMO MODE` at boot and `DEMO 1512.3W` on row 2.
+3. Laptop: Control panel > Live with hardware > appliance matching `DEMO_APPLIANCE` (geyser / fan / lamp) > 30 s > Start. Or `python live_control_fast.py --appliance geyser --kwh 195` to see CUTOFF quickly.
+4. Sends V0 every 5 s (about 720 Blynk messages an hour), so unplug it when done. Flash `ilyasa_esp32_main` again for real readings.
+Say it plainly when showing it: the readings are simulated by the ESP32; the rest of the chain is real.
+
 ### 4c. Running on a Mac
 
 Use Python **3.11 or 3.12** from python.org (TensorFlow may not install on the newest Python). Check with `python3 --version`.
@@ -289,14 +297,16 @@ This is the **device / remote control dashboard**. It shows live sensor values a
 | Pricing history chart | V17 + V18 | price and cost over time |
 | LSTM expected (chart line) | V21 | what the LSTM predicted, one step earlier, the power would be now |
 | Historical avg (chart line) | V22 | iAWE average for this time of day, in the real appliance's watts |
+| Limit (chart line) | V23 | the threshold the decision used, in real watts (drops near a bracket / at ToU peak) |
 
-**Adding the LSTM and historical lines to the Power history chart (one time):**
+**Adding the LSTM, historical and limit lines to the Power history chart (one time):**
 1. Blynk website > **Developer Zone > My Templates > Ilyasa Energy > Datastreams > + New Datastream > Virtual Pin**:
    - `V21`, name **LSTM expected**, Data type **Double**, Units **Watt**, Min 0, Max 2000, Decimals #.##
    - `V22`, name **Historical avg**, Data type **Double**, Units **Watt**, Min 0, Max 2000, Decimals #.##
+   - `V23`, name **Limit**, Data type **Double**, Units **Watt**, Min 0, Max 2000, Decimals #.##
    - Use the same Max as V0. For both, set history/"Save raw data" the same as V0 (**1 Minute AVG**).
-2. **Web Dashboard** tab (and the phone app layout if you use it): edit the **Power history** chart > **Add datastream** > V21, then again > V22. Make V0 blue solid, V21 orange (dashed if offered), V22 grey. Save and **Apply** the template.
-3. Nothing to change on the ESP32. The Python loops (`live_control_fast.py`, `live_control_loop_1h.py`, Control panel live loop) send V21 and V22 every cycle. If the datastreams don't exist yet they print one note and carry on.
+2. **Web Dashboard** tab (and the phone app layout if you use it): edit the **Power history** chart > **Add datastream** > V21, then V22, then V23. Make V0 blue solid, V21 orange (dashed if offered), V22 grey, V23 red. Save and **Apply** the template.
+3. Nothing to change on the ESP32. The Python loops (`live_control_fast.py`, `live_control_loop_1h.py`, Control panel live loop) send V21, V22 and V23 every cycle. If the datastreams don't exist yet they print one note and carry on.
 
 How to read it: V21 is sent one step late on purpose, so the orange line sits right on top of the blue line it was predicting. Where orange and blue are close, the LSTM predicted well. Grey is "a normal day at this time" from the training data (an average of on and off periods, so it can sit below a running heater). The decision itself still uses the 30-min-ahead forecast, which is in the Streamlit Live tab.
 
